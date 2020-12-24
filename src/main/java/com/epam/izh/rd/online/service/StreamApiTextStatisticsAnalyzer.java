@@ -14,38 +14,40 @@ import static java.util.Collections.*;
  * {@link SimpleTextStatisticsAnalyzer}.
  */
 public class StreamApiTextStatisticsAnalyzer implements TextStatisticsAnalyzer {
+    TextStatisticsAnalyzer analyzer = new SimpleTextStatisticsAnalyzer();
+
     @Override
     public int countSumLengthOfWords(String text) {
-        return 0;
+        return analyzer.countSumLengthOfWords(text);
     }
 
     @Override
     public int countNumberOfWords(String text) {
-        return 0;
+        return analyzer.countNumberOfWords(text);
     }
 
     @Override
     public int countNumberOfUniqueWords(String text) {
-        return 0;
+        return analyzer.countNumberOfUniqueWords(text);
     }
 
     @Override
     public List<String> getWords(String text) {
-        return emptyList();
+        return analyzer.getWords(text);
     }
 
     @Override
     public Set<String> getUniqueWords(String text) {
-        return emptySet();
+        return analyzer.getUniqueWords(text);
     }
 
     @Override
     public Map<String, Integer> countNumberOfWordsRepetitions(String text) {
-        return emptyMap();
+        return analyzer.countNumberOfWordsRepetitions(text);
     }
 
     @Override
     public List<String> sortWordsByLength(String text, Direction direction) {
-        return emptyList();
+        return analyzer.sortWordsByLength(text, direction);
     }
 }
